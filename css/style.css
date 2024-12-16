@@ -125,11 +125,21 @@ body{
     width: 33vw;
     height: 100vh;
     max-width: 30rem;
-    position: absolute;
-    top: 0;
-    right: 0;
-    float: right;
+    align-self: flex-start;
+    margin-right: 0;
+    color: var(--color-normal);
+    border: none;
+    transform: translateX(100%);
+    transition: transform 1s ease-in-out;
 }
+
+.c-dialog.is-close{}
+
+.c-dialog.is-open{
+    transform: translateX(0);
+}
+
+
 
 .c-show-button{
     background-color: var(--background-brand);

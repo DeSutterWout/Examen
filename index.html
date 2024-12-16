@@ -17,7 +17,7 @@
         <h2>
             Add product
         </h2>
-        <button type="button" class="close" autofocus>Close</button>
+        <button type="button" class="close" autofocus>&times;</button>
 
         <form method="dialog">
             <details name="details">
@@ -137,9 +137,11 @@
 
         showBtn.addEventListener("click", () => {
             dialogElem.showModal();
+            dialogElem.classList.toggle("is-open");
         });
 
         closeBtn.addEventListener("click", () => {
+            dialogElem.classList.toggle("is-open");
             dialogElem.close();
         });
     </script>
