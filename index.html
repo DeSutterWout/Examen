@@ -7,17 +7,21 @@
     <title>Wout De Sutter - Interaction Design - Labo examen 2024</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <dialog class="c-dialog" id="dialog">
 
-        <h2>
-            Add product
-        </h2>
-        <button type="button" class="close" autofocus>&times;</button>
+        <div class="c-dialog__header">
+            <h2>
+                Add product
+            </h2>
+            <button type="button" class="close" autofocus>&times;</button>
+        </div>
 
         <form method="dialog">
             <details name="details">
@@ -137,12 +141,20 @@
 
         showBtn.addEventListener("click", () => {
             dialogElem.showModal();
-            dialogElem.classList.toggle("is-open");
+            dialogElem.classList.add("is-open");
+            dialogElem.classList.remove("is-close");
         });
 
         closeBtn.addEventListener("click", () => {
-            dialogElem.classList.toggle("is-open");
-            dialogElem.close();
+            dialogElem.classList.add("is-close");
+
+            dialogElem.addEventListener('transitionend', () => {
+                dialogElem.classList.remove("is-open");
+                dialogElem.classList.remove("is-close");
+                dialogElem.close();
+            }, {
+                once: true
+            });
         });
     </script>
 </body>

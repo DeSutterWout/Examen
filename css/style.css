@@ -133,10 +133,12 @@ body{
     transition: transform 1s ease-in-out;
 }
 
-.c-dialog.is-close{}
-
 .c-dialog.is-open{
     transform: translateX(0);
+}
+
+.c-dialog.is-close{
+    transform: translateX(100%);
 }
 
 
