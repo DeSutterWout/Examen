@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Naam Voornaam] - Interaction Design - Labo examen 2024</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <dialog id="dialog">
+
+        <h2>
+            Add product
+        </h2>
+        <button type="button" class="close" autofocus>Close</button>
+
+        <form method="dialog">
+            <details name="details">
+                <summary>General</summary>
+                <p>
+                    Nothing to see here
+                </p>
+            </details>
+            <details name="details" open>
+                <summary>Pricing</summary>
+                <ul>
+                    <li>
+                        <input type="radio" name="price">
+                        <label>
+                            Single Payment
+                            Charge a one-time fee
+                        </label>
+                    </li>
+                    <li>
+                        <input type="radio" name="price">
+                        <label>
+                            Subscription
+                            Charge an ongoing fee
+                        </label>
+                    </li>
+                    <li>
+                        <input type="radio" name="price">
+                        <label>
+                            Lead magnet
+                            Allow access for free
+                        </label>
+                    </li>
+                    <li>
+                        <input type="radio" name="price">
+                        <label>
+                            Pay what you want
+                            Customers set the price
+                        </label>
+                    </li>
+                </ul>
+                <div>
+                    <label for="pricing-model">
+                        Pricing model
+                    </label>
+                    <select id="pricing-model">
+                        <option value="package-pricing">Package pricing</option>
+                        <option value="other-pricing">Other pricing</option>
+                        <option value="another-pricing">Another pricing</option>
+                    </select>
+                    <p>Select the pricing model for this product</p>
+                </div>
+                <div>
+                    <label for="price">
+                        Price
+                    </label>
+                    <input type="text" id="price">
+                    <label for="price-per">
+                        Per
+                    </label>
+                    <input type="text" id="price-per">
+                </div>
+                <div>
+                    <label for="repeat">
+                        Repeat payment every
+                    </label>
+                    <input type="text" id="repeat">
+                    <label for="period">
+                        Time period
+                    </label>
+                    <select id="period">
+                        <option value="repeat-month">Month</option>
+                        <option value="repeat-year">Year</option>
+                    </select>
+                </div>
+                <div>
+                    <input id="trial" type="checkbox">
+                    <label for="trial">
+                        Subscription has free trial?
+                    </label>
+                    <label for="trial-amount">
+                        Trial amount
+                    </label>
+                    <input type="text" id="trial-amount">
+                    <label for="trial-period">
+                        Trial period
+                    </label>
+                    <select id="trial-period">
+                        <option value="trial-day">Day</option>
+                        <option value="trial-week">Week</option>
+                        <option value="trial-month">Month</option>
+                    </select>
+                    <p>
+                        Offer a free trial period before payment starts
+                    </p>
+                </div>
+            </details>
+            <details name="details">
+                <summary>Media</summary>
+                <p>
+                    Nothing to see here
+                </p>
+            </details>
+            <button type="button">
+                Save as draft
+            </button>
+            <button type="submit">
+                Publish product
+            </button>
+        </form>
+    </dialog>
+    <button class="show" type="button">Show the dialog</button>
+
+    <script>
+        const dialogElem = document.getElementById("dialog");
+        const showBtn = document.querySelector(".show");
+        const closeBtn = document.querySelector(".close");
+
+        showBtn.addEventListener("click", () => {
+            dialogElem.showModal();
+        });
+
+        closeBtn.addEventListener("click", () => {
+            dialogElem.close();
+        });
+    </script>
+</body>
+
+</html>
