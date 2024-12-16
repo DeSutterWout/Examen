@@ -74,3 +74,72 @@
     --font-size-1: 1rem;
     --font-size-2: 1.3333rem;
 }
+
+/*---------------------------------------/*
+ # SETTINGS
+/*---------------------------------------*/
+
+html{
+    font-size: 15px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-normal);
+    background-color: var(--background-layer-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+*{
+    font-family: "Inter";
+}
+
+/*---------------------------------------/*
+ # GENERIC
+/*---------------------------------------*/
+
+
+
+/*---------------------------------------/*
+ # ELEMENTS
+/*---------------------------------------*/
+
+/*---------------------------------------/*
+ # OBJECTS
+/*---------------------------------------*/
+
+/*---------------------------------------/*
+ # COMPONENTS
+/*---------------------------------------*/
+
+.c-dialog{
+    background-color: var(--background-layer-2);
+    padding: var(--space-6);
+    width: 33vw;
+    height: 100vh;
+    max-width: 30rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+}
+
+.c-show-button{
+    background-color: var(--background-brand);
+    color: var(--color-on-brand);
+    border-radius: var(--radius-1);
+    border: none;
+    padding: var(--space-3) var(--space-5);
+    font-size: var(--font-size-1);
+}
+
+/*---------------------------------------/*
+ # UTILITIES
+/*---------------------------------------*/
