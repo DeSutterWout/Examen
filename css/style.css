@@ -135,7 +135,7 @@ input[type="radio"]{
     padding: var(--space-6);
     width: 33vw;
     height: 100vh;
-    max-width: 30rem;
+    min-width: 30rem;
     align-self: flex-start;
     margin-right: 0;
     padding: var(--space-6);
@@ -196,23 +196,31 @@ input[type="radio"]{
 
 .c-pricing__options{
     width: 100%;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    gap: var(--space-4);
 }
 
 .c-pricing__options li{
-    width: 50%;
+    width: calc(50% - var(--space-4));
     list-style: none;
 }
 
 .c-pricing__options li input[type="radio"] + label{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: var(--space-3);
     border: 1px solid var(--border-color-normal);
     border-radius: var(--radius-1);
     margin-bottom: var(--space-3);
     cursor: pointer;
+    position: relative;
+    height: max-content;
+    box-sizing: border-box;
 }
 
 
@@ -225,13 +233,13 @@ input[type="radio"]{
     cursor: pointer;
     &::after{
         content: "";
-        top: 0;
-        right: 0;
-        background-color: transparent;
-        background-image: url("../images/icon-check.svg");
+        position: absolute;
+        top: var(--space-1);
+        right: var(--space-1);
+        width: var(--space-6);
+        height: var(--space-6);
+        background-image: url("../svg/Check.svg");
         background-size: 100%;
-        opacity: 0;
-        transition: ;
     }
 }
 
