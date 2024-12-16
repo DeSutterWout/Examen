@@ -108,6 +108,11 @@ select {
   border-radius: var(--radius-2);
   background-color: var(--background-layer-2);
   padding: var(--space-4);
+  color: var(--color-soft);
+}
+
+input[type="text"]{
+    text-align: right
 }
 
 input[type='radio'] {
@@ -133,6 +138,7 @@ input[type='radio'] {
 /*---------------------------------------/*
  # COMPONENTS
 /*---------------------------------------*/
+
 
 .c-dialog {
   background-color: var(--background-layer-2);
@@ -180,7 +186,6 @@ input[type='radio'] {
 }
 
 .c-details {
-  margin-bottom: var(--space-4);
   display: flex;
   flex-direction: column;
   gap: var(--space-7);
@@ -230,9 +235,8 @@ input[type='radio'] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  margin-top: var(--space-3);
   width: 100%;
-  padding: var(--space-3);
+  padding: var(--space-4);
   border-radius: var(--radius-1);
   color: var(--color-normal);
   background-color: var(--background-layer-2);
@@ -260,6 +264,7 @@ input[type='radio'] {
 
 .c-pricing__options li input[type='radio'] + label {
   display: flex;
+  color: var(--color-normal);
   flex-direction: column;
   justify-content: center;
   padding: var(--space-3);
@@ -272,6 +277,10 @@ input[type='radio'] {
   box-sizing: border-box;
   margin: 0;
 }
+
+.c-pricing__options li input + label span{
+    color: var(--color-light);
+} 
 
 .c-pricing__options li input[type='radio']:checked + label {
   position: relative;
@@ -292,6 +301,14 @@ input[type='radio'] {
     background-size: 100%;
     background-repeat: no-repeat;
   }
+}
+
+.c-input__price::before{
+        content: '$';
+        color: var(--color-light);
+        font-size: var(--font-size-1);
+        margin-right: var(--space-05);
+    }
 }
 
 .c-input-container {
