@@ -126,6 +126,13 @@ input[type="radio"]{
  # OBJECTS
 /*---------------------------------------*/
 
+.o-2-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 /*---------------------------------------/*
  # COMPONENTS
 /*---------------------------------------*/
@@ -186,13 +193,20 @@ input[type="radio"]{
 }
 
 .c-details select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     margin-top: var(--space-3);
     width: 100%;
     padding: var(--space-3);
     border-radius: var(--radius-1);
     color: var(--color-normal);
     background-color: var(--background-layer-2);
+    background-image: url('../svg/CaretUpDown.svg');
+    background-repeat: no-repeat;
+    background-position: right var(--space-3) center;
 }
+
 
 .c-pricing__options{
     width: 100%;
@@ -246,6 +260,18 @@ input[type="radio"]{
         background-size: 100%;
         background-repeat: no-repeat;
     }
+}
+
+.c-input-container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.c-input-container label{
+    font-weight: bold;
+    color: var(--color-soft);
+    margin-bottom: var(--space-1);
 }
 
 .c-show-button{

@@ -73,7 +73,7 @@
                     </select>
                     <p>Select the pricing model for this product</p>
                 </div>
-                <div>
+                <div class="o-2-container">
                     <label for="price">
                         Price
                     </label>
@@ -83,18 +83,22 @@
                     </label>
                     <input type="text" id="price-per">
                 </div>
-                <div>
-                    <label for="repeat">
-                        Repeat payment every
-                    </label>
-                    <input type="text" id="repeat">
-                    <label for="period">
-                        Time period
-                    </label>
-                    <select id="period">
-                        <option value="repeat-month">Month</option>
-                        <option value="repeat-year">Year</option>
-                    </select>
+                <div class="o-2-container">
+                    <div class="c-input-container">
+                        <label for="repeat">
+                            Repeat payment every
+                        </label>
+                        <input type="text" id="repeat">
+                    </div>
+                    <div class="c-input-container">
+                        <label for="period">
+                            Time period
+                        </label>
+                        <select id="period">
+                            <option value="repeat-month">Month</option>
+                            <option value="repeat-year">Year</option>
+                        </select>
+                    </div>
                 </div>
                 <div>
                     <input id="trial" type="checkbox">
