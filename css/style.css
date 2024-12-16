@@ -202,6 +202,8 @@ input[type="radio"]{
     flex-wrap: wrap;
     flex-direction: row;
     gap: var(--space-4);
+    row-gap: 0;
+    margin-bottom: var(--space-7);
 }
 
 .c-pricing__options li{
@@ -221,16 +223,18 @@ input[type="radio"]{
     position: relative;
     height: max-content;
     box-sizing: border-box;
+    margin: 0;
 }
 
 
 .c-pricing__options li input[type="radio"]:checked + label{
-    display: block;
+    position: relative;
     padding: var(--space-3);
     border: 1px solid var(--border-color-brand);
     border-radius: var(--radius-1);
     margin-bottom: var(--space-3);
     cursor: pointer;
+    margin: 0;
     &::after{
         content: "";
         position: absolute;
@@ -240,6 +244,7 @@ input[type="radio"]{
         height: var(--space-6);
         background-image: url("../svg/Check.svg");
         background-size: 100%;
+        background-repeat: no-repeat;
     }
 }
 

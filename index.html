@@ -20,7 +20,7 @@
             <h2>
                 Add product
             </h2>
-            <button type="button" class="close" autofocus>&times;</button>
+            <button type="button" class="close" autofocus><img src="svg/X.svg"></button>
         </div>
 
         <form method="dialog">
@@ -37,28 +37,28 @@
                         <input type="radio" id="price-1" name="price">
                         <label for="price-1">
                             Single Payment
-                            Charge a one-time fee
+                            <span class="price-description">Charge a one-time fee</span>
                         </label>
                     </li>
                     <li>
-                        <input type="radio" id="price-2" name="price">
+                        <input type="radio" id="price-2" checked name="price">
                         <label for="price-2">
                             Subscription
-                            Charge an ongoing fee
+                            <span class="price-description">Charge an ongoing fee</span>
                         </label>
                     </li>
                     <li>
                         <input type="radio" id="price-3" name="price">
                         <label for="price-3">
                             Lead magnet
-                            Allow access for free
+                            <span class="price-description">Allow access for free</span>
                         </label>
                     </li>
                     <li>
                         <input type="radio" id="price-4" name="price">
                         <label for="price-4">
                             Pay what you want
-                            Customers set the price
+                            <span class="price-description">Customers set the price</span>
                         </label>
                     </li>
                 </ul>
