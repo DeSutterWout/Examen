@@ -109,6 +109,15 @@ input{
     padding: var(--space-4);
 }
 
+input[type="radio"]{
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;;
+}
+
+
+
 /*---------------------------------------/*
  # ELEMENTS
 /*---------------------------------------*/
@@ -167,7 +176,63 @@ input{
 }
 
 .c-details{
-    margin-bottom: var(--space-5);
+    margin-bottom: var(--space-4);
+}
+
+.c-details summary{
+    font-weight: bold;
+    color: var(--color-soft);
+    cursor: pointer;
+}
+
+.c-details select {
+    margin-top: var(--space-3);
+    width: 100%;
+    padding: var(--space-3);
+    border-radius: var(--radius-1);
+    color: var(--color-normal);
+    background-color: var(--background-layer-2);
+}
+
+.c-pricing__options{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.c-pricing__options li{
+    width: 50%;
+    list-style: none;
+}
+
+.c-pricing__options li input[type="radio"] + label{
+    display: block;
+    padding: var(--space-3);
+    border: 1px solid var(--border-color-normal);
+    border-radius: var(--radius-1);
+    margin-bottom: var(--space-3);
+    cursor: pointer;
+}
+
+
+.c-pricing__options li input[type="radio"]:checked + label{
+    display: block;
+    padding: var(--space-3);
+    border: 1px solid var(--border-color-brand);
+    border-radius: var(--radius-1);
+    margin-bottom: var(--space-3);
+    cursor: pointer;
+    &::after{
+        content: "";
+        top: 0;
+        right: 0;
+        background-color: transparent;
+        background-image: url("../images/icon-check.svg");
+        background-size: 100%;
+        opacity: 0;
+        transition: ;
+    }
 }
 
 .c-show-button{
